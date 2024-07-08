@@ -7,7 +7,8 @@
 6. Network ACLs (optional).
 
 
-:Terraform code I executed on Vs code**:
+## Terraform code I executed on Vs code
+**main.tf**:
 ```
 Configure the AWS provider:
 provider "aws" {
