@@ -1,26 +1,22 @@
-# Terraform-Class
-This is a repo for the submission of my Terraform class Assignments
-
-#Assignment
-
-Provision an AWS VPC using Terraform to create the following resources:
-VPC,
-Subnets (public and private),
-Internet Gateway,
-Route Tables,
-Security Groups,
-Network ACLs (optional).
+# Provision an AWS VPC using Terraform to create the following resources:
+1. VPC
+2. Subnets (public and private),
+3. Internet Gateway,
+4. Route Tables,
+5. Security Groups,
+6. Network ACLs (optional).
 
 
-#Terraform code I executed on Vs code
-
-# Configure the AWS provider
+:Terraform code I executed on Vs code**:
+```
+Configure the AWS provider:
 provider "aws" {
   region = "us-east-1" 
  
 }
 
-# Create a VPC with a /16 CIDR block
+
+Create a VPC with a /16 CIDR block
 resource "aws_vpc" "my_vpc" {
   cidr_block = "10.0.0.0/16"
 }
@@ -96,5 +92,7 @@ resource "aws_network_acl_association" "public_nacl_association" {
   subnet_id = aws_subnet.public_subnet.id
   network_acl_id = aws_network_acl.public_nacl.id
 }
+```
+
 
 
